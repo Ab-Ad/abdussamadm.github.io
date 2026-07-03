@@ -1,214 +1,489 @@
-<!DOCTYPE HTML>
-<!--
-	Miniport by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Miniport by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abdussamad Mangalasseri — Physicist, ELTE / CERN</title>
+<meta name="description" content="Personal site of Abdussamad Mangalasseri, PhD researcher at ELTE working on detector technology for the LHCb experiment at CERN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,700;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#03060F;
+    --bg-panel: rgba(15,34,68,0.35);
+    --ink:#D8E4F0;
+    --ink-soft:#c8d8ec;
+    --blue-deep:#0F2244;
+    --blue-mid:#1a3a6a;
+    --blue-glow:#8ECEE8;
+    --gold:#EDB94A;
+    --gold-soft:#F5DFA0;
+    --violet:#2a0a3a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Raleway',sans-serif;
+    font-size:16px;
+    line-height:1.8;
+    overflow-x:hidden;
+  }
 
-		<!-- Nav -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">Top</a></li>
-					<li><a href="#work">Work</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
+  /* ── Ambient space backdrop, fixed behind everything ── */
+  .space-bg{ position:fixed; inset:0; z-index:0; pointer-events:none; }
+  .stars{
+    position:absolute; inset:0;
+    background-image:
+      radial-gradient(circle,#ffffff 1px, transparent 1px),
+      radial-gradient(circle,#ffffff 1px, transparent 1px),
+      radial-gradient(circle,#aacfff 1px, transparent 1px);
+    background-size:180px 180px, 120px 120px, 90px 90px;
+    background-position:0 0, 60px 60px, 30px 90px;
+    opacity:0.22;
+  }
+  .nebula{ position:absolute; border-radius:50%; filter:blur(2px); }
+  .nebula-a{ top:-8%; right:-10%; width:44vw; height:44vw; background:radial-gradient(circle,var(--blue-mid) 0%, transparent 70%); opacity:0.5; }
+  .nebula-b{ top:32%; left:-14%; width:38vw; height:38vw; background:radial-gradient(circle,var(--blue-deep) 0%, transparent 70%); opacity:0.55; }
+  .nebula-c{ top:62%; right:8%; width:30vw; height:30vw; background:radial-gradient(circle,var(--violet) 0%, transparent 70%); opacity:0.4; }
+  .nebula-d{ top:88%; left:20%; width:34vw; height:34vw; background:radial-gradient(circle,var(--blue-mid) 0%, transparent 70%); opacity:0.35; }
 
-		<!-- Home -->
-			<article id="top" class="wrapper style1">
-				<div class="container">
-					<div class="row">
-						<div class="col-4 col-5-large col-12-medium">
-							<span class="image fit"><img src="images/pic00.jpg" alt="" /></span>
-						</div>
-						<div class="col-8 col-7-large col-12-medium">
-							<header>
-								<h1>Hi. I'm <strong>Jane Doe</strong>.</h1>
-							</header>
-							<p>And this is <strong>Miniport</strong>, a free, fully responsive HTML5 site template designed by <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net">HTML5 UP</a> &amp; released under the <a href="http://html5up.net/license">CCA license</a>.</p>
-							<a href="#work" class="button large scrolly">Learn about what I do</a>
-						</div>
-					</div>
-				</div>
-			</article>
+  /* ── Layout shell ── */
+  .wrap{ position:relative; z-index:2; max-width:980px; margin:0 auto; padding:0 24px; }
+  section{ padding:96px 0; }
+  @media (max-width:700px){ section{ padding:64px 0; } }
 
-		<!-- Work -->
-			<article id="work" class="wrapper style2">
-				<div class="container">
-					<header>
-						<h2>Here's all the stuff I do.</h2>
-						<p>Odio turpis amet sed consequat eget posuere consequat.</p>
-					</header>
-					<div class="row aln-center">
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon featured fa-comments"></span>
-								<h3>Consequat lorem</h3>
-								<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
-							</section>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon solid featured fa-camera-retro"></span>
-								<h3>Lorem dolor tempus</h3>
-								<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
-							</section>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon featured fa-thumbs-up"></span>
-								<h3>Feugiat posuere</h3>
-								<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
-							</section>
-						</div>
-					</div>
-					<footer>
-						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-						<a href="#portfolio" class="button large scrolly">See some of my recent work</a>
-					</footer>
-				</div>
-			</article>
+  /* ── Nav ── */
+  nav{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    backdrop-filter:blur(10px);
+    background:rgba(3,6,15,0.72);
+    border-bottom:1px solid rgba(142,206,232,0.12);
+  }
+  nav .wrap{ display:flex; align-items:center; justify-content:space-between; padding-top:16px; padding-bottom:16px; max-width:1080px; }
+  .brand{ font-family:'Playfair Display',serif; font-style:italic; color:var(--gold-soft); font-size:17px; letter-spacing:0.3px; text-decoration:none; }
+  .navlinks{ display:flex; gap:28px; list-style:none; }
+  .navlinks a{ color:var(--blue-glow); text-decoration:none; font-size:12.5px; letter-spacing:1.6px; text-transform:uppercase; font-weight:600; transition:color .2s ease; }
+  .navlinks a:hover{ color:var(--gold); }
+  @media (max-width:640px){ .navlinks{ gap:14px; } .navlinks a{ font-size:10.5px; letter-spacing:1px; } }
 
-		<!-- Portfolio -->
-			<article id="portfolio" class="wrapper style3">
-				<div class="container">
-					<header>
-						<h2>Here’s some stuff I made recently.</h2>
-						<p>Proin odio consequat  sapien vestibulum consequat lorem dolore feugiat.</p>
-					</header>
-					<div class="row">
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-								<h3><a href="#">Magna feugiat</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-								<h3><a href="#">Veroeros primis</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-								<h3><a href="#">Lorem ipsum</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-								<h3><a href="#">Tempus dolore</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-								<h3><a href="#">Feugiat aliquam</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
-								<h3><a href="#">Sed amet ornare</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-					</div>
-					<footer>
-						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-						<a href="#contact" class="button large scrolly">Get in touch with me</a>
-					</footer>
-				</div>
-			</article>
+  /* ── Hero ── */
+  .hero{ min-height:100vh; display:flex; align-items:center; padding-top:120px; }
+  .hero .wrap{ max-width:1080px; display:grid; grid-template-columns:1.3fr 0.9fr; gap:48px; align-items:center; }
+  @media (max-width:800px){ .hero .wrap{ grid-template-columns:1fr; } .hero{ padding-top:140px; } }
 
-		<!-- Contact -->
-			<article id="contact" class="wrapper style4">
-				<div class="container medium">
-					<header>
-						<h2>Have me make stuff for you.</h2>
-						<p>Ornare nulla proin odio consequat sapien vestibulum ipsum.</p>
-					</header>
-					<div class="row">
-						<div class="col-12">
-							<form method="post" action="#">
-								<div class="row">
-									<div class="col-6 col-12-small">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="text" name="email" id="email" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<input type="text" name="subject" id="subject" placeholder="Subject" />
-									</div>
-									<div class="col-12">
-										<textarea name="message" id="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" /></li>
-											<li><input type="reset" value="Clear Form" class="alt" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</div>
-						<div class="col-12">
-							<hr />
-							<h3>Find me on ...</h3>
-							<ul class="social">
-								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-								<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-								<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-								<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								<!--
-								<li><a href="#" class="icon solid fa-rss"><span>RSS</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram"><span>Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-foursquare"><span>Foursquare</span></a></li>
-								<li><a href="#" class="icon brands fa-skype"><span>Skype</span></a></li>
-								<li><a href="#" class="icon brands fa-soundcloud"><span>Soundcloud</span></a></li>
-								<li><a href="#" class="icon brands fa-youtube"><span>YouTube</span></a></li>
-								<li><a href="#" class="icon brands fa-blogger"><span>Blogger</span></a></li>
-								<li><a href="#" class="icon brands fa-flickr"><span>Flickr</span></a></li>
-								<li><a href="#" class="icon brands fa-vimeo"><span>Vimeo</span></a></li>
-								-->
-							</ul>
-							<hr />
-						</div>
-					</div>
-					<footer>
-						<ul id="copyright">
-							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
-				</div>
-			</article>
+  .eyebrow{ font-size:12px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:18px; display:flex; align-items:center; gap:10px; }
+  .eyebrow::before{ content:""; width:26px; height:1px; background:var(--gold); }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  .hero h1{ font-family:'Raleway',sans-serif; font-weight:900; font-size:52px; line-height:1.06; color:#fff; text-transform:uppercase; letter-spacing:-0.5px; margin-bottom:14px; }
+  @media (max-width:640px){ .hero h1{ font-size:36px; } }
 
-	</body>
+  .hero .tagline{ font-family:'Playfair Display',serif; font-style:italic; font-size:21px; color:var(--gold-soft); margin-bottom:22px; line-height:1.5; }
+
+  .hero p.lede{ color:var(--ink-soft); font-size:15.5px; max-width:52ch; margin-bottom:30px; }
+
+  .cta-row{ display:flex; gap:14px; flex-wrap:wrap; }
+  .btn{ display:inline-flex; align-items:center; gap:8px; padding:13px 26px; border-radius:999px; font-size:13px; letter-spacing:1px; text-transform:uppercase; font-weight:700; text-decoration:none; transition:all .2s ease; }
+  .btn-gold{ background:var(--gold); color:#1a1204; }
+  .btn-gold:hover{ background:var(--gold-soft); transform:translateY(-2px); box-shadow:0 8px 24px rgba(237,185,74,0.25); }
+  .btn-ghost{ border:1px solid rgba(142,206,232,0.4); color:var(--blue-glow); }
+  .btn-ghost:hover{ border-color:var(--gold); color:var(--gold); transform:translateY(-2px); }
+
+  .photo-frame{ position:relative; aspect-ratio:4/5; border-radius:14px; overflow:hidden; border:1px solid var(--blue-mid); box-shadow:0 0 50px rgba(26,58,106,0.55); background:linear-gradient(160deg, rgba(26,58,106,0.35), rgba(3,6,15,0.6)); }
+  .photo-frame img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .photo-placeholder{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; height:100%; text-align:center; padding:20px; color:var(--blue-glow); font-size:12px; letter-spacing:0.5px; }
+  .photo-placeholder .icon{ font-size:26px; opacity:0.7; }
+  .photo-placeholder code{ color:var(--gold-soft); font-size:11px; background:rgba(0,0,0,0.25); padding:3px 8px; border-radius:4px; }
+
+  /* ── Section headers ── */
+  .section-head{ margin-bottom:44px; }
+  .section-num{ font-family:'Playfair Display',serif; font-style:italic; color:var(--gold); font-size:14px; letter-spacing:1px; margin-bottom:8px; }
+  .section-title{ font-weight:900; font-size:32px; text-transform:uppercase; color:#fff; letter-spacing:-0.3px; }
+  .section-sub{ color:var(--blue-glow); font-size:14.5px; margin-top:10px; max-width:60ch; }
+
+  /* ── About ── */
+  .about-grid{ display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:start; }
+  @media (max-width:760px){ .about-grid{ grid-template-columns:1fr; } }
+  .about-grid p{ color:var(--ink-soft); font-size:15px; margin-bottom:14px; }
+  .fact-list{ list-style:none; display:flex; flex-direction:column; gap:14px; }
+  .fact-list li{ display:flex; gap:12px; font-size:14px; color:var(--ink-soft); border-bottom:1px solid rgba(142,206,232,0.12); padding-bottom:12px; }
+  .fact-list .label{ min-width:110px; color:var(--gold); font-weight:700; font-size:12px; letter-spacing:1px; text-transform:uppercase; }
+
+  /* ── Pull quote ── */
+  .pull-quote{ border-left:3px solid var(--gold); padding:14px 22px; margin:24px 0; background:rgba(26,58,106,0.18); border-radius:0 8px 8px 0; }
+  .pull-quote p{ font-family:'Playfair Display',serif; font-style:italic; font-size:16.5px; color:var(--gold-soft); margin:0; }
+
+  /* ── What I study ── */
+  .study-cards{ display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+  @media (max-width:700px){ .study-cards{ grid-template-columns:1fr; } }
+  .card{ background:linear-gradient(135deg, rgba(26,58,106,0.32) 0%, rgba(14,22,68,0.32) 100%); border:1px solid rgba(237,185,74,0.25); border-radius:12px; padding:26px; }
+  .card h3{ color:#fff; font-size:18px; margin-bottom:10px; }
+  .card h3 .tag{ display:block; font-family:'Playfair Display',serif; font-style:italic; color:var(--gold); font-size:12.5px; margin-bottom:6px; }
+  .card p{ color:var(--ink-soft); font-size:14px; }
+
+  .stat-box{ text-align:center; padding:22px; border:1px solid rgba(237,185,74,0.25); border-radius:12px; background:rgba(15,34,68,0.35); }
+  .stat-box .num{ font-size:38px; font-weight:900; color:var(--gold); font-family:'Raleway',sans-serif; }
+  .stat-box .cap{ font-size:12.5px; color:var(--blue-glow); letter-spacing:0.5px; margin-top:6px; }
+
+  /* ── Timeline / research journey (particle-track motif) ── */
+  .track{ position:relative; padding-left:34px; }
+  .track::before{ content:""; position:absolute; left:6px; top:6px; bottom:6px; width:2px; background:repeating-linear-gradient(to bottom, var(--gold) 0 6px, transparent 6px 12px); }
+  .track-item{ position:relative; margin-bottom:42px; }
+  .track-item:last-child{ margin-bottom:0; }
+  .track-item::before{ content:""; position:absolute; left:-34px; top:4px; width:13px; height:13px; border-radius:50%; background:var(--bg); border:2px solid var(--gold); box-shadow:0 0 12px rgba(237,185,74,0.6); }
+  .track-date{ font-size:12px; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:4px; }
+  .track-item h3{ color:#fff; font-size:19px; margin-bottom:2px; }
+  .track-place{ font-size:13px; color:var(--blue-glow); font-style:italic; margin-bottom:10px; }
+  .track-item p{ color:var(--ink-soft); font-size:14.5px; margin-bottom:6px; }
+  .track-item ul{ margin:8px 0 0 0; padding-left:18px; color:var(--ink-soft); font-size:14px; }
+  .track-item li{ margin-bottom:6px; }
+
+  /* ── Photo gallery ── */
+  .gallery{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  @media (max-width:700px){ .gallery{ grid-template-columns:repeat(2,1fr); } }
+  .gallery .photo-frame{ aspect-ratio:1/1; border-radius:10px; }
+  .gallery .photo-placeholder{ font-size:11px; }
+
+  /* ── Talks & recognition ── */
+  .two-col-list{ display:grid; grid-template-columns:1fr 1fr; gap:36px; }
+  @media (max-width:760px){ .two-col-list{ grid-template-columns:1fr; } }
+  .list-title{ font-size:12px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:16px; }
+  .talk-item{ margin-bottom:20px; }
+  .talk-item .t{ color:#fff; font-size:14.5px; font-weight:600; margin-bottom:3px; }
+  .talk-item .d{ font-size:12.5px; color:var(--blue-glow); font-style:italic; }
+  .talk-item a{ color:var(--gold-soft); font-size:12px; text-decoration:underline; text-underline-offset:2px; }
+  .talk-item a:hover{ color:var(--gold); }
+  .badge-list{ display:flex; flex-direction:column; gap:12px; }
+  .badge{ background:rgba(15,34,68,0.4); border:1px solid rgba(237,185,74,0.25); border-radius:8px; padding:12px 16px; font-size:13.5px; color:var(--ink-soft); }
+  .badge strong{ color:var(--gold-soft); display:block; font-size:14px; margin-bottom:2px; }
+
+  /* ── Beyond the lab (placeholder) ── */
+  .placeholder-card{ border:1px dashed rgba(142,206,232,0.4); border-radius:12px; padding:36px; text-align:center; color:var(--blue-glow); background:rgba(15,34,68,0.2); }
+  .placeholder-card .icon{ font-size:28px; margin-bottom:10px; }
+  .placeholder-card p{ font-size:13.5px; margin:0; }
+
+  /* ── Contact ── */
+  .contact-cards{ display:flex; gap:14px; flex-wrap:wrap; }
+  .contact-card{ background:rgba(15,34,68,0.55); border:1px solid rgba(142,206,232,0.25); border-radius:10px; padding:14px 20px; text-decoration:none; display:flex; align-items:center; gap:12px; transition:all .2s ease; }
+  .contact-card:hover{ border-color:var(--gold); background:rgba(26,58,106,0.5); transform:translateY(-2px); box-shadow:0 8px 20px rgba(237,185,74,0.15); }
+  .contact-avatar{ width:38px; height:38px; border-radius:50%; background:linear-gradient(135deg,var(--blue-mid),var(--violet)); display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:800; color:var(--gold); flex-shrink:0; }
+  .contact-info .name{ font-size:14px; font-weight:700; color:#fff; line-height:1.2; }
+  .contact-info .role{ font-size:11.5px; color:var(--blue-glow); }
+
+  /* ── Footer ── */
+  footer{ border-top:1px solid rgba(237,185,74,0.2); padding:36px 0; text-align:center; }
+  footer .big{ font-weight:900; font-size:18px; color:#fff; letter-spacing:1px; text-transform:uppercase; margin-bottom:8px; }
+  footer .small{ font-size:12px; color:var(--blue-glow); letter-spacing:0.4px; }
+
+  /* ── Reveal on scroll ── */
+  .reveal{ opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    .reveal{ opacity:1; transform:none; transition:none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="space-bg">
+  <div class="stars"></div>
+  <div class="nebula nebula-a"></div>
+  <div class="nebula nebula-b"></div>
+  <div class="nebula nebula-c"></div>
+  <div class="nebula nebula-d"></div>
+</div>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="brand">A. Mangalasseri</a>
+    <ul class="navlinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#photos">Photos</a></li>
+      <li><a href="#talks">Talks</a></li>
+      <li><a href="#life">Beyond the Lab</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<header id="top" class="hero">
+  <div class="wrap">
+    <div class="reveal in">
+      <div class="eyebrow">ELTE · CERN · LHCb</div>
+      <h1>Abdussamad<br>Mangalasseri</h1>
+      <p class="tagline">Hunting for the particles hiding in plain sight.</p>
+      <p class="lede">I'm a PhD researcher based in Budapest, building and testing detector technology for one of the experiments at CERN. My work sits somewhere between a physics puzzle and a hardware workshop — part of it is figuring out what an invisible particle might look like if we could ever catch one, and part of it is soldering, testing, and calibrating the equipment that gives us a chance to.</p>
+      <div class="cta-row">
+        <a href="#research" class="btn btn-gold">See my research</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+    <div class="reveal in">
+      <div class="photo-frame">
+        <img src="assets/img/profile.jpg" alt="Portrait of Abdussamad Mangalasseri" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="photo-placeholder" style="display:flex;">
+          <span class="icon">🖼️</span>
+          <span>Add your portrait here</span>
+          <code>assets/img/profile.jpg</code>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════ ABOUT ══════════════ -->
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-num">Who I am</div>
+      <div class="section-title">About Me</div>
+    </div>
+    <div class="about-grid reveal">
+      <div>
+        <p>I grew up in Kerala, India, and studied physics through an integrated Bachelor's and Master's program at the Central University of Tamil Nadu. Along the way I got hooked on a simple question: what is the universe actually made of? Not the 15% we can see and touch — the rest of it.</p>
+        <p>That question took me to Mumbai, working with the ALICE experiment team on how particles fly apart after tiny, violent collisions, and now to Eötvös Loránd University (ELTE) in Budapest, where I'm a PhD scholar building detector components for the LHCb experiment at CERN, near Geneva.</p>
+        <p>I like problems that make you work with your hands as much as your head — a good day for me involves a whiteboard in the morning and an oscilloscope in the afternoon.</p>
+      </div>
+      <ul class="fact-list">
+        <li><span class="label">Based in</span><span>Budapest, Hungary</span></li>
+        <li><span class="label">Currently</span><span>PhD Scholar, ELTE Doctoral School of Physics</span></li>
+        <li><span class="label">Working at</span><span>CERN / LHCb experiment</span></li>
+        <li><span class="label">Supervisor</span><span>Prof. Biplab Dey</span></li>
+        <li><span class="label">Fellowship</span><span>Stipendium Hungaricum (2025–26)</span></li>
+        <li><span class="label">Started out in</span><span>Kerala &amp; Tamil Nadu, India</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ RESEARCH ══════════════ -->
+<section id="research">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-num">What I study</div>
+      <div class="section-title">Chasing the Invisible</div>
+      <p class="section-sub">About 85% of the universe is made of something we call dark matter — we know it's there because of how it pulls on everything around it, but no instrument has ever directly caught a piece of it. My work is aimed at building the kind of detector that might.</p>
+    </div>
+
+    <div class="pull-quote reveal">
+      <p>Some particles may be so shy that they pass straight through ordinary detectors, travel for meters, and only reveal themselves far from where they were born.</p>
+    </div>
+
+    <div class="study-cards reveal">
+      <div class="card">
+        <h3><span class="tag">Hardware</span>Building the eyes of a detector</h3>
+        <p>At ELTE, I run an optical test bench that checks the light sensors (PMTs) destined for LHCb's upgraded calorimeter — making sure each one responds fast enough, consistently enough, and quietly enough to be trusted. I also help quality-check the absorber modules and fibres that make up the detector itself, coordinating with teams at CERN so everything is ready ahead of installation.</p>
+      </div>
+      <div class="card">
+        <h3><span class="tag">Simulation</span>Modelling what a hidden particle would look like</h3>
+        <p>I also work on CODEX-b/β, a proposed detector designed to sit a short distance from LHCb's collision point and catch particles that live just long enough to sneak past the main experiment. I build simulations that ask: if such a particle existed, what trace would it leave behind — and how would we recognise it as something new rather than noise?</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px;" class="reveal">
+      <div class="stat-box"><div class="num">85%</div><div class="cap">of the universe is dark matter — still unidentified</div></div>
+      <div class="stat-box"><div class="num">30m</div><div class="cap">how far CODEX-b sits from the LHCb collision point</div></div>
+      <div class="stat-box"><div class="num">2027</div><div class="cap">target year for the new detector's PMT production</div></div>
+    </div>
+
+    <div class="section-head reveal" style="margin-top:70px;">
+      <div class="section-num">The journey so far</div>
+      <div class="section-title">Research Timeline</div>
+    </div>
+
+    <div class="track reveal">
+      <div class="track-item">
+        <div class="track-date">April 2025 — Present</div>
+        <h3>PhD Scholar</h3>
+        <div class="track-place">Eötvös Loránd University (ELTE) · Budapest, Hungary — Supervisor: Prof. Biplab Dey</div>
+        <p>Testing and qualifying the light sensors and detector modules for LHCb's next-generation calorimeter.</p>
+        <ul>
+          <li>Built an optical test bench to check timing, consistency, and background noise in the detector's light sensors, in step with other testing labs worldwide</li>
+          <li>Quality-checked absorber modules and optical fibres ahead of installation during the LHC's next shutdown</li>
+          <li>Kept ELTE's testing procedures aligned with CERN's, ahead of full-scale production in 2027</li>
+        </ul>
+      </div>
+      <div class="track-item">
+        <div class="track-date">July 2023 — April 2024</div>
+        <h3>Project Associate</h3>
+        <div class="track-place">Indian Institute of Technology Bombay · Mumbai, India — Supervisor: Prof. Sadhana Dash</div>
+        <p>Studied how particles fly apart after high-energy collisions, as part of India's contribution to the ALICE experiment at CERN.</p>
+        <ul>
+          <li>Ran the first computer simulations of a particular statistical pattern in proton collisions, to help interpret future real data</li>
+          <li>Looked at how the choice of particles studied and the detector's field of view can bias that pattern</li>
+        </ul>
+      </div>
+      <div class="track-item">
+        <div class="track-date">January — May 2023</div>
+        <h3>Master's Research Project</h3>
+        <div class="track-place">Central University of Tamil Nadu · Thiruvarur, India — Supervisor: Dr. Nirbhay Kumar Behera</div>
+        <p>Simulated proton collisions to study how electric charge is distributed among the particles produced.</p>
+      </div>
+      <div class="track-item">
+        <div class="track-date">June — August 2022</div>
+        <h3>Summer Research Internship</h3>
+        <div class="track-place">Central University of Tamil Nadu · Thiruvarur, India — Supervisor: Dr. Nirbhay Kumar Behera</div>
+        <p>Studied collisions between heavy atomic nuclei, looking at how particles spread out in angle and energy, and how that spread swirls — a signature physicists use to understand the state of matter created in the collision.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PHOTOS ══════════════ -->
+<section id="photos">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-num">In the lab &amp; beyond</div>
+      <div class="section-title">Photos</div>
+      <p class="section-sub">A few snapshots from CERN, ELTE, and along the way. Drop your own images into the file names below and they'll appear here automatically.</p>
+    </div>
+    <div class="gallery reveal">
+      <div class="photo-frame">
+        <img src="assets/img/research1.jpg" alt="Research photo 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="photo-placeholder" style="display:flex;"><span class="icon">📷</span><span>Add a photo</span><code>assets/img/research1.jpg</code></div>
+      </div>
+      <div class="photo-frame">
+        <img src="assets/img/research2.jpg" alt="Research photo 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="photo-placeholder" style="display:flex;"><span class="icon">📷</span><span>Add a photo</span><code>assets/img/research2.jpg</code></div>
+      </div>
+      <div class="photo-frame">
+        <img src="assets/img/research3.jpg" alt="Research photo 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="photo-placeholder" style="display:flex;"><span class="icon">📷</span><span>Add a photo</span><code>assets/img/research3.jpg</code></div>
+      </div>
+      <div class="photo-frame">
+        <img src="assets/img/cern1.jpg" alt="At CERN, photo 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="photo-placeholder" style="display:flex;"><span class="icon">📷</span><span>Add a photo</span><code>assets/img/cern1.jpg</code></div>
+      </div>
+      <div class="photo-frame">
+        <img src="assets/img/cern2.jpg" alt="At CERN, photo 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="photo-placeholder" style="display:flex;"><span class="icon">📷</span><span>Add a photo</span><code>assets/img/cern2.jpg</code></div>
+      </div>
+      <div class="photo-frame">
+        <img src="assets/img/misc1.jpg" alt="Miscellaneous photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="photo-placeholder" style="display:flex;"><span class="icon">📷</span><span>Add a photo</span><code>assets/img/misc1.jpg</code></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ TALKS & RECOGNITION ══════════════ -->
+<section id="talks">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-num">Sharing the work</div>
+      <div class="section-title">Talks &amp; Recognition</div>
+    </div>
+    <div class="two-col-list reveal">
+      <div>
+        <div class="list-title">Selected Presentations</div>
+        <div class="talk-item">
+          <div class="t">Status of CODEX-β Simulation Infrastructure</div>
+          <div class="d">LHCb Simulation Working Group Meeting, CERN (remote) — 22 April 2026</div>
+          <a href="https://indico.cern.ch/event/1677348/#13-status-of-codex-bbeta-mrs" target="_blank" rel="noopener">View talk details →</a>
+        </div>
+        <div class="talk-item">
+          <div class="t">τ-Polarimetry in Λb → Λc τ ν̄ at LHCb</div>
+          <div class="d">Bad Honnef Physics School, Germany — March 2026 (presented by Prof. Biplab Dey; I produced the HAMMER analysis plots shown in the talk)</div>
+          <a href="https://indico.cern.ch/event/1571155/contributions/6961754/attachments/3255381/5812518/SL_BadHonnef_202603-1.pdf" target="_blank" rel="noopener">View slides →</a>
+        </div>
+        <div class="list-title" style="margin-top:30px;">Workshops Attended</div>
+        <div class="talk-item">
+          <div class="t">LHCb StarterKit</div>
+          <div class="d">CERN, Geneva, Switzerland — 1–5 December 2025</div>
+        </div>
+        <div class="talk-item">
+          <div class="t">India–JINR Workshop (remote)</div>
+          <div class="d">JINR, Dubna, Russia — 16–19 October 2023</div>
+        </div>
+        <div class="talk-item">
+          <div class="t">Dynamics of QCD Matter</div>
+          <div class="d">NISER, Bhubaneswar, India — 7–9 October 2023</div>
+        </div>
+        <div class="talk-item">
+          <div class="t">IUCAA School on Introductory Astronomy</div>
+          <div class="d">Central University of Tamil Nadu, India — 5 March 2019</div>
+        </div>
+      </div>
+      <div>
+        <div class="list-title">Fellowships &amp; Grants</div>
+        <div class="badge-list">
+          <div class="badge"><strong>ELTE Doctoral School of Physics Research Grant</strong>200,000 HUF — February 2026</div>
+          <div class="badge"><strong>Stipendium Hungaricum Fellow (PhD)</strong>2025–26</div>
+          <div class="badge"><strong>Kerala State Government eGrantz Fellow (Master's)</strong>June 2022</div>
+        </div>
+        <div class="list-title" style="margin-top:30px;">Education</div>
+        <div class="badge-list">
+          <div class="badge"><strong>Integrated M.Sc. in Physics</strong>Central University of Tamil Nadu — August 2018 to May 2023 · GPA 8.13/10</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ BEYOND THE LAB ══════════════ -->
+<section id="life">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-num">Off the clock</div>
+      <div class="section-title">Beyond the Lab</div>
+      <p class="section-sub">There's more to life than particle detectors. This corner is reserved for hobbies, interests, and everything else — coming soon.</p>
+    </div>
+    <div class="placeholder-card reveal">
+      <div class="icon">🌱</div>
+      <p>This section is under construction. Add your hobbies, interests, and personal photos here whenever you're ready.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CONTACT ══════════════ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-num">Say hello</div>
+      <div class="section-title">Get in Touch</div>
+    </div>
+    <div class="contact-cards reveal">
+      <a href="mailto:samad2492@gmail.com" class="contact-card">
+        <div class="contact-avatar">✉</div>
+        <div class="contact-info"><div class="name">Email</div><div class="role">samad2492@gmail.com</div></div>
+      </a>
+      <a href="https://orcid.org/0009-0000-6136-8536" target="_blank" rel="noopener" class="contact-card">
+        <div class="contact-avatar">iD</div>
+        <div class="contact-info"><div class="name">ORCID</div><div class="role">0009-0000-6136-8536</div></div>
+      </a>
+      <a href="https://gitlab.cern.ch/amangala" target="_blank" rel="noopener" class="contact-card">
+        <div class="contact-avatar">GL</div>
+        <div class="contact-info"><div class="name">GitLab (CERN)</div><div class="role">amangala</div></div>
+      </a>
+      <a href="https://github.com/abdussamadm" target="_blank" rel="noopener" class="contact-card">
+        <div class="contact-avatar">GH</div>
+        <div class="contact-info"><div class="name">GitHub</div><div class="role">abdussamadm</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="big">Welcome to the dark side.</div>
+    <div class="small">Abdussamad Mangalasseri · ELTE, Budapest · CERN / LHCb</div>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el=>io.observe(el));
+</script>
+
+</body>
 </html>
