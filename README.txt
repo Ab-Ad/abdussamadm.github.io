@@ -1,32 +1,45 @@
-Miniport by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# abdussamadm.github.io
 
+Personal site for Abdussamad Mangalasseri, styled after the CODEX-b poster (deep space background, gold accents, Raleway + Playfair Display).
 
-A super simple responsive portfolio template. It's only a single page because hey, sometimes
-you don't need a half dozen pages to make your point.
+## Adding your photos
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+Drop image files into `assets/img/` using these exact names — the page finds them automatically, no code changes needed:
 
-(* = Not included)
+| File | Used for |
+|---|---|
+| `assets/img/profile.jpg` | Hero portrait (top of page) |
+| `assets/img/research1.jpg` | Photo grid |
+| `assets/img/research2.jpg` | Photo grid |
+| `assets/img/research3.jpg` | Photo grid |
+| `assets/img/cern1.jpg` | Photo grid |
+| `assets/img/cern2.jpg` | Photo grid |
+| `assets/img/misc1.jpg` | Photo grid |
 
-Feedback, bug reports, and comments are not only welcome, but strongly encouraged :)
+Until you add a file, that spot shows a dashed placeholder with its filename — so the site never looks broken.
 
-AJ
-aj@lkn.io | @ajlkn
+To add more photo slots than these six, copy one `<div class="photo-frame">…</div>` block inside the `#photos` section in `index.html` and give it a new filename.
 
-PS: Not sure how to get that contact form working? Give formspree.io a try (it's awesome).
+## Adding hobbies / "Beyond the Lab"
 
+Open `index.html`, find the section starting with `<section id="life">`, and replace the placeholder card with your own text, list, or photos — same pattern as the other sections.
 
-Credits:
+## Publishing to GitHub Pages
 
-	Demo Images:
-		Unsplash (unsplash.com)
+Since your repo is named `abdussamadm.github.io`, GitHub will publish whatever is on the `main` branch automatically — no extra setup needed.
 
-	Icons:
-		Font Awesome (fontawesome.io)
+```bash
+# from inside your local clone of abdussamadm.github.io
+cp -r /path/to/this/site/* .
+git add .
+git commit -m "Add personal website"
+git push origin main
+```
 
-	Other:
-		jQuery (jquery.com)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+Then visit `https://abdussamadm.github.io` after a minute or two.
+
+## Notes
+
+- I couldn't push this for you directly — I don't have write access to your GitHub account from here. Copy the files in and push whenever you're ready.
+- I left the CV's two academic references (with their personal CERN/university emails) off the public site, since that contact info was given as private references for job applications rather than for public posting. Happy to add a references section back in if you'd like.
+- The GitHub link in the Contact section assumes your username is `abdussamadm` — update it in `index.html` if that's wrong.
